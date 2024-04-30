@@ -52,12 +52,13 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#services">Cars</a></li>
           <li><a class="nav-link scrollto" href="{{ route('dealers') }}">Dealers</a></li>
+          
   @auth
           @if(Auth::user()->role == "admin")
           <li class="dropdown"><a href="#"><span>Actions</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('addcars') }}">Add Cars</a></li>
-              <li><a href="#">User Logs</a></li>
+              <li><a class="nav-link scrollto" href="{{ route('history') }}">User logs</a></li>
             </ul>
           </li>
           @endif
@@ -158,10 +159,21 @@
               <span>${{ $car->price}}.00</span>
 
 
+              @auth
+              
               <div class="mt-4">
               <a href="{{ route('purchase',['id' => $car->inventory_id]) }}" class="btn btn-warning">BUY CAR</a>
 
               </div>
+
+            @else
+
+              <div class="mt-4">
+              <a href="{{ route('purchase',['id' => $car->inventory_id]) }}" class="btn btn-warning">BUY CAR</a>
+
+              </div>
+
+              @endauth
               
             </div>
           </div>

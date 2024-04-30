@@ -105,6 +105,7 @@ Route::controller(PagesController::class)->group(function() {
     Route::get('addcars', 'addCars')->name("addcars");
     Route::get('purchase/{id}', 'purchase')->name("purchase");
     Route::get('dealers', 'dealers')->name("dealers");
+    Route::get('history', 'userlogs')->name("history");
     
 });
 

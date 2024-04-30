@@ -90,4 +90,13 @@ class PagesController extends Controller
 
         return view('pages.dealers',compact('dealers'));
     }
+
+
+    public function userlogs(){
+
+
+
+        return view('pages.history');
+
+    }
 }

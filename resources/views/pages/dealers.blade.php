@@ -40,9 +40,16 @@
 <body>
 
 
+
+
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
+
+    
+
+    
       <div class="container" data-aos="fade-up">
+      <a href="{{ route('home') }}" class="btn btn-warning mb-5">Return Home</a>
 
         <div class="section-title">
           <h2>Dealers</h2>
